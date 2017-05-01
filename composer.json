@@ -3,7 +3,7 @@
     "type": "project",
     "license": "proprietary",
     "description": "Project description",
-    "minimum-stability": "beta",
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.1",
         "symfony/flex": "1.0.x-dev",
