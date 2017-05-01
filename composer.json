@@ -3,15 +3,15 @@
     "type": "project",
     "license": "proprietary",
     "description": "Project description",
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "require": {
         "php": "^7.1",
         "symfony/flex": "1.0.x-dev",
-        "symfony/framework-bundle": "3.3.x-dev",
-        "symfony/yaml": "3.3.x-dev"
+        "symfony/framework-bundle": "^3.3",
+        "symfony/yaml": "^3.3"
     },
     "require-dev": {
-        "symfony/dotenv": "3.3.x-dev"
+        "symfony/dotenv": "^3.3"
     },
     "config": {
         "platform": {
