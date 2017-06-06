@@ -1,0 +1,18 @@
+---------------------------------------------------------------------------
+
+by teohhanhui at 2017-06-06T11:15:54Z
+
+ping @fabpot @Pierstoval
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-06-06T11:26:20Z
+
+TL;DR:
+We should add a feature in Flex that will retrieve recipes for any package in the `replace` composer option for any installed package.
+
+---
+
+I'm not sure I would approve this. By opinion, I approve, but for related technical stuff, I think we should allow users to use `symfony/symfony`, the only problem is to handle the manifest for this project, or update Flex so it can manage packages that `replace` other packages, which is the case for `symfony/symfony`, but also for other packages that may need this feature too.
+
+Actually, any monolithic project splitted in subtrees should benefit from a feature coming from Flex, not be restricted to like this PR proposes.
