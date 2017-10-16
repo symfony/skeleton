@@ -3,14 +3,16 @@
     "type": "project",
     "license": "proprietary",
     "description": "Project description",
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.0.8",
+        "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
-        "symfony/framework-bundle": "^3.3",
-        "symfony/yaml": "^3.3"
+        "symfony/framework-bundle": "^4.0",
+        "symfony/yaml": "^4.0"
     },
     "require-dev": {
-        "symfony/dotenv": "^3.3"
+        "symfony/dotenv": "^4.0"
     },
     "config": {
         "preferred-install": {
@@ -40,12 +42,61 @@
     },
     "conflict": {
         "symfony/symfony": "*",
-        "symfony/twig-bundle": "<3.3",
-        "symfony/debug": "<3.3"
+        "symfony/asset": "<4.0",
+        "symfony/browser-kit": "<4.0",
+        "symfony/cache": "<4.0",
+        "symfony/class-loader": "<4.0",
+        "symfony/config": "<4.0",
+        "symfony/console": "<4.0",
+        "symfony/css-selector": "<4.0",
+        "symfony/dependency-injection": "<4.0",
+        "symfony/debug": "<4.0",
+        "symfony/debug-bundle": "<4.0",
+        "symfony/doctrine-bridge": "<4.0",
+        "symfony/dom-crawler": "<4.0",
+        "symfony/dotenv": "<4.0",
+        "symfony/event-dispatcher": "<4.0",
+        "symfony/expression-language": "<4.0",
+        "symfony/filesystem": "<4.0",
+        "symfony/finder": "<4.0",
+        "symfony/form": "<4.0",
+        "symfony/framework-bundle": "<4.0",
+        "symfony/http-foundation": "<4.0",
+        "symfony/http-kernel": "<4.0",
+        "symfony/inflector": "<4.0",
+        "symfony/intl": "<4.0",
+        "symfony/ldap": "<4.0",
+        "symfony/lock": "<4.0",
+        "symfony/monolog-bridge": "<4.0",
+        "symfony/options-resolver": "<4.0",
+        "symfony/process": "<4.0",
+        "symfony/property-access": "<4.0",
+        "symfony/property-info": "<4.0",
+        "symfony/proxy-manager-bridge": "<4.0",
+        "symfony/routing": "<4.0",
+        "symfony/security": "<4.0",
+        "symfony/security-core": "<4.0",
+        "symfony/security-csrf": "<4.0",
+        "symfony/security-guard": "<4.0",
+        "symfony/security-http": "<4.0",
+        "symfony/security-bundle": "<4.0",
+        "symfony/serializer": "<4.0",
+        "symfony/stopwatch": "<4.0",
+        "symfony/templating": "<4.0",
+        "symfony/translation": "<4.0",
+        "symfony/twig-bridge": "<4.0",
+        "symfony/twig-bundle": "<4.0",
+        "symfony/validator": "<4.0",
+        "symfony/var-dumper": "<4.0",
+        "symfony/web-link": "<4.0",
+        "symfony/web-profiler-bundle": "<4.0",
+        "symfony/web-server-bundle": "<4.0",
+        "symfony/workflow": "<4.0",
+        "symfony/yaml": "<4.0"
     },
     "extra": {
         "symfony": {
-            "id": "",
+            "id": "01BVMTVQTSHX6461C4C6VWB1D0",
             "allow-contrib": false
         }
     }
