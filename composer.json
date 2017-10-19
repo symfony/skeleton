@@ -7,11 +7,11 @@
     "require": {
         "php": "^7.0.8",
         "symfony/console": "^3.4",
+        "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.4",
         "symfony/yaml": "^3.4"
     },
     "require-dev": {
-        "symfony/flex": "^1.0",
         "symfony/dotenv": "^3.4"
     },
     "config": {
