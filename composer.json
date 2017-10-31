@@ -5,8 +5,8 @@
     "description": "Project description",
     "require": {
         "php": "^7.0.8",
-        "symfony/flex": "^1.0",
         "symfony/console": "^3.3",
+        "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.3",
         "symfony/yaml": "^3.3"
     },
