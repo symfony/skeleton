@@ -1,0 +1,93 @@
+---------------------------------------------------------------------------
+
+by 20uf at 2017-11-12T11:30:22Z
+
+Hi,
+
+<del>Watch the PR history before making a news.</del>
+See symfony/flex#162
+
+The approach of @nicolas-grekas is coherent.
+Many companies use the default version, for Debian currently it is 7.0.
+
+Regards
+
+---------------------------------------------------------------------------
+
+by fre5h at 2017-11-12T12:27:07Z
+
+@20uf Using `symfony/flex` and using `symfony/skeleton` are different things.
+It is good that Symfony Flex still works with PHP 7.0, it allows to use Symfony Flex on Symfony(3.3/3.4) on projects which do not work with PHP 7.1
+
+Take a look here https://github.com/symfony/skeleton/blob/master/composer.json it is the master branch of `symfony/skeleton`. As you see it requires symfony packages started from version **^4.0**. And Symfony4 requires PHP 7.1 by default, this is just one example https://github.com/symfony/framework-bundle/blob/master/composer.json#L19
+
+That's what will happen when you try to create a new `symfony/skeleton` from `master` or `v4.0.0-BETA1` project on PHP 7.0 by using `composer create-project symfony/skeleton my-project` insruction
+```bash
+# to be sure that I'm using PHP 7.0
+Artems-MacBook-Pro:test fresh$ php -v
+PHP 7.0.25 (cli) (built: Nov  5 2017 10:47:53) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.0.22, Copyright (c) 1999-2017, by Zend Technologies
+    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans
+
+# example with Symfony4
+Artems-MacBook-Pro:test fresh$ composer create-project symfony/skeleton=v4.0.0-BETA1 .
+Installing symfony/skeleton (v4.0.0-BETA1)
+  - Installing symfony/skeleton (v4.0.0-BETA1): Loading from cache
+Created project in .
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - symfony/console v4.0.0-BETA3 requires php ^7.1.3 -> your PHP version (7.0.25) does not satisfy that requirement.
+    - symfony/console v4.0.0-BETA2 requires php ^7.1.3 -> your PHP version (7.0.25) does not satisfy that requirement.
+    - symfony/console v4.0.0-BETA1 requires php ^7.1.3 -> your PHP version (7.0.25) does not satisfy that requirement.
+    - Installation request for symfony/console ^4.0 -> satisfiable by symfony/console[v4.0.0-BETA1, v4.0.0-BETA2, v4.0.0-BETA3].
+
+#example with dev-master
+Artems-MacBook-Pro:test fresh$ composer create-project symfony/skeleton=dev-master .
+Installing symfony/skeleton (dev-master 8725c24707e7514d5d8f2d074f73f47f6c0e5319)
+  - Installing symfony/skeleton (dev-master master): Downloading (100%)
+Created project in .
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - symfony/console v4.0.0-BETA3 requires php ^7.1.3 -> your PHP version (7.0.25) does not satisfy that requirement.
+    - symfony/console v4.0.0-BETA2 requires php ^7.1.3 -> your PHP version (7.0.25) does not satisfy that requirement.
+    - symfony/console v4.0.0-BETA1 requires php ^7.1.3 -> your PHP version (7.0.25) does not satisfy that requirement.
+    - Installation request for symfony/console ^4.0 -> satisfiable by symfony/console[v4.0.0-BETA1, v4.0.0-BETA2, v4.0.0-BETA3].
+```
+
+So my fix doesn't broke the work of Symfony Flex with PHP 7.0. It only fixes the minimum PHP version for `symfony/skeleton` for upcoming Symfony4. Because of Symfony4 requires PHP 7.1 and it is no longer matter that Syfmony Flex works with PHP 7.0, because minimum PHP version is set by Symfony
+
+---------------------------------------------------------------------------
+
+by B-Galati at 2017-11-12T12:32:28Z
+
+What about removing this require ?
+
+---------------------------------------------------------------------------
+
+by fre5h at 2017-11-12T12:36:48Z
+
+@B-Galati Could be a solution. In case we remove php version from requirements of `symfony/skeleton` it will be regulated by symfony packages which are required.
+
+@nicolas-grekas what do you think?
+
+---------------------------------------------------------------------------
+
+by 20uf at 2017-11-12T13:08:50Z
+
+So much for me for the sorry mistake :)
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-11-12T15:01:59Z
+
+> What about removing this require ?
+
+I think I'd prefer keeping it, as it may improve discoverability of the lowest supported php version.
