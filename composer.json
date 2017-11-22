@@ -3,17 +3,17 @@
     "type": "project",
     "license": "proprietary",
     "description": "Project description",
-    "minimum-stability": "RC",
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3",
-        "symfony/console": "^4.0",
+        "symfony/console": "^4.1",
         "symfony/flex": "^1.0",
-        "symfony/framework-bundle": "^4.0",
+        "symfony/framework-bundle": "^4.1",
         "symfony/lts": "^4@dev",
-        "symfony/yaml": "^4.0"
+        "symfony/yaml": "^4.1"
     },
     "require-dev": {
-        "symfony/dotenv": "^4.0"
+        "symfony/dotenv": "^4.1"
     },
     "config": {
         "preferred-install": {
