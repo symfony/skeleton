@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-12-13T08:31:25Z
+
+Note that we could also decide the contrary: list polyfill-php71 so that any third party dep requiring it would not trigger the installation of the dep.
+WDYT is best?
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-12-13T15:08:02Z
+
+I like the second option: explicitly list the polyfill we won't need anyway.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-12-13T15:19:53Z
+
+Fine to me. According to this policy, I now rebased this PR on 3.3, and listed polyfill-iconv.
+Then we should add polyfill-php71 when merging in 4.0.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2017-12-13T15:26:08Z
+
+And I unlisted `polyfill-apcu` because of the polyfill around `Zend Data Cache`.
