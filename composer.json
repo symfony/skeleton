@@ -31,7 +31,7 @@
         }
     },
     "replace": {
-        "symfony/polyfill-apcu": "*",
+        "symfony/polyfill-iconv": "*",
         "symfony/polyfill-php70": "*",
         "symfony/polyfill-php56": "*"
     },
