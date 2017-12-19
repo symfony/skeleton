@@ -1,8 +1,8 @@
 {
     "name": "symfony/skeleton",
     "type": "project",
-    "license": "proprietary",
-    "description": "Project description",
+    "license": "MIT",
+    "description": "A minimal Symfony project recommended to create bare bones applications",
     "require": {
         "php": "^7.0.8",
         "ext-iconv": "*",
