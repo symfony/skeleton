@@ -14,7 +14,8 @@
         "symfony/yaml": "^4.1"
     },
     "require-dev": {
-        "symfony/dotenv": "^4.1"
+        "symfony/dotenv": "^4.1",
+        "symfony/thanks": "^1.0"
     },
     "config": {
         "preferred-install": {
