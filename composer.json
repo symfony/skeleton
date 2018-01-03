@@ -13,8 +13,7 @@
         "symfony/yaml": "^3.4"
     },
     "require-dev": {
-        "symfony/dotenv": "^3.4",
-        "symfony/thanks": "^1.0"
+        "symfony/dotenv": "^3.4"
     },
     "config": {
         "preferred-install": {
