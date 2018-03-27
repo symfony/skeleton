@@ -1,0 +1,59 @@
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-03-26T13:59:36Z
+
+We could also move the new conflict rules in a new metapackage. WDYT?
+
+---------------------------------------------------------------------------
+
+by dunglas at 2018-03-26T14:47:52Z
+
+👍 to not clutter the default `composer.json` and create a metapackage instead.
+
+---------------------------------------------------------------------------
+
+by keradus at 2018-03-26T16:53:01Z
+
+yep, putting this to skeleton would lead that owner of project created using skeleton would have to deal with the list of components, eg when new component would be created ;) metapackage is cleaner for sure :+1:
+
+---------------------------------------------------------------------------
+
+by ostrolucky at 2018-03-26T18:57:26Z
+
+Just change constraints in symfony/lts to `>=5,<99` as was suggested to you.
+
+:-1:  for this PR, it moves responsibility of maintaining these constraints to user.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-03-26T19:48:36Z
+
+PR updated to use https://github.com/symfony/force-lowest
+
+(@ostrolucky you missed Nils comment that explains why <99 couldn't work)
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2018-03-26T20:38:53Z
+
+I'm not sure the official `symfony/skeleton` is supposed to be installed with `dev-master` (which is causing conflicts here). The fix is caused by Composer, therefore I'm not sure we should handle this ourselves.
+
+If you need to install a skeleton with `dev-master`, why not a simple `no-lts-skeleton` or something similar? Especially if it's for testing.
+
+As `dev-master` will be resolved as `9999999-dev`, what would happen to `dev-master#0123456` if this `0123456` commit has been created **before** any release we are conflicting with? Like if we conflict with `<1.2` and `dev-master#0123456` is at least 1 commit further after `1.2`?
+
+IMO this should be fixed inside Composer, even though the current alternatives seem to work 🤔
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-03-26T20:40:44Z
+
+@Pierstoval how would you handle the feature freeze period then? Note that you missed the 2nd reason given in the description.
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2018-03-26T21:11:42Z
+
+The feature-freeze period is like an alpha stage to the project. Isn't it possible to create such releases instead of relying on this? (That said, I'm not sure this would fix the issue)
+
+I didn't note the 2nd reason, you're right, and this is actually a game-changer: installing 4.1 instead of 4.0 is important in master, I see that
