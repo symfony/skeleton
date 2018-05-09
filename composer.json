@@ -9,8 +9,8 @@
         "ext-iconv": "*",
         "symfony/console": "^4.1",
         "symfony/flex": "^1.0",
-        "symfony/force-lowest": "=4.1",
         "symfony/framework-bundle": "^4.1",
+        "symfony/lts": "^4@dev",
         "symfony/yaml": "^4.1"
     },
     "require-dev": {
