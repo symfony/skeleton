@@ -6,6 +6,7 @@
     "minimum-stability": "beta",
     "require": {
         "php": "^7.1.3",
+        "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/console": "^4.1",
         "symfony/flex": "^1.0",
@@ -33,6 +34,7 @@
         }
     },
     "replace": {
+        "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
         "symfony/polyfill-php71": "*",
         "symfony/polyfill-php70": "*",
