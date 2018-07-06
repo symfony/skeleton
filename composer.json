@@ -17,6 +17,9 @@
         "symfony/dotenv": "^3.4"
     },
     "config": {
+        "platform": {
+            "php": "7.0.8"
+        },
         "preferred-install": {
             "*": "dist"
         },
