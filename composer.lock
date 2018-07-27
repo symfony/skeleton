@@ -687,16 +687,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.87",
+            "version": "v1.0.88",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "c2856dddbbb7c9e9327890d6f1a96e79f305236b"
+                "reference": "730ff18ed2d15ed8a0eaba8115a0cffdf53c39eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/c2856dddbbb7c9e9327890d6f1a96e79f305236b",
-                "reference": "c2856dddbbb7c9e9327890d6f1a96e79f305236b",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/730ff18ed2d15ed8a0eaba8115a0cffdf53c39eb",
+                "reference": "730ff18ed2d15ed8a0eaba8115a0cffdf53c39eb",
                 "shasum": ""
             },
             "require": {
@@ -730,7 +730,7 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2018-07-27T09:19:27+00:00"
+            "time": "2018-07-27T16:55:54+00:00"
         },
         {
             "name": "symfony/framework-bundle",
