@@ -1,0 +1,43 @@
+---------------------------------------------------------------------------
+
+by keradus at 2018-08-14T12:34:14Z
+
+will `lts` / `force-lowest` packages will be still maintained ?
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-08-14T12:36:26Z
+
+I'd like we abandon them in favor of the new extra.symfony.require setting. It would simplify a lot the releasing process for us (maintaining the list of components in lts / force-lowest is extra work I'd like we could save us from doing.)
+
+---------------------------------------------------------------------------
+
+by keradus at 2018-08-14T12:41:03Z
+
+Would `extra.symfony.require` work without flex, then ?
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-08-14T12:49:48Z
+
+@keradus please check https://github.com/symfony/flex/pull/409 (short answer: no ;) )
+
+---------------------------------------------------------------------------
+
+by keradus at 2018-08-14T14:44:27Z
+
+So, that's was exactly my point. Using `extra.symfony.require` requires `flex`, so it would be nice to not abandon `lts` and `force-lowest` (even if `skeleton` would not use it anymore), for the ppl who are not using `flex`
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-08-14T14:49:29Z
+
+The issue is that maintaining these packages is not free (it's a non trivial task that takes time). If one would like to maintain a fork, one will always be free to do it of course.
+
+---------------------------------------------------------------------------
+
+by keradus at 2018-08-14T15:05:47Z
+
+content of `lts` / `force-lowest` packages is super small and kind of trivial, while I agree that there is work to be done to maintain it. but especially with `lts` - not that much maintainance tbh...
+
+we already have a bot that is bumping lock file, what about letting bot manage those packages as well ?
