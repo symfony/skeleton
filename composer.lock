@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84724925da7c8920986fe76b3fe47c76",
+    "content-hash": "b01d6775dcd989aeeaf8d9f04e6ddec9",
     "packages": [
         {
             "name": "psr/cache",
@@ -1047,87 +1047,6 @@
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
             "time": "2018-08-01T14:47:47+00:00"
-        },
-        {
-            "name": "symfony/lts",
-            "version": "v3",
-            "conflict": {
-                "symfony/asset": ">=4",
-                "symfony/browser-kit": ">=4",
-                "symfony/cache": ">=4",
-                "symfony/class-loader": ">=4",
-                "symfony/config": ">=4",
-                "symfony/console": ">=4",
-                "symfony/css-selector": ">=4",
-                "symfony/debug": ">=4",
-                "symfony/debug-bundle": ">=4",
-                "symfony/dependency-injection": ">=4",
-                "symfony/doctrine-bridge": ">=4",
-                "symfony/dom-crawler": ">=4",
-                "symfony/dotenv": ">=4",
-                "symfony/event-dispatcher": ">=4",
-                "symfony/expression-language": ">=4",
-                "symfony/filesystem": ">=4",
-                "symfony/finder": ">=4",
-                "symfony/form": ">=4",
-                "symfony/framework-bundle": ">=4",
-                "symfony/http-foundation": ">=4",
-                "symfony/http-kernel": ">=4",
-                "symfony/inflector": ">=4",
-                "symfony/intl": ">=4",
-                "symfony/ldap": ">=4",
-                "symfony/lock": ">=4",
-                "symfony/monolog-bridge": ">=4",
-                "symfony/options-resolver": ">=4",
-                "symfony/process": ">=4",
-                "symfony/property-access": ">=4",
-                "symfony/property-info": ">=4",
-                "symfony/proxy-manager-bridge": ">=4",
-                "symfony/routing": ">=4",
-                "symfony/security": ">=4",
-                "symfony/security-bundle": ">=4",
-                "symfony/security-core": ">=4",
-                "symfony/security-csrf": ">=4",
-                "symfony/security-guard": ">=4",
-                "symfony/security-http": ">=4",
-                "symfony/serializer": ">=4",
-                "symfony/stopwatch": ">=4",
-                "symfony/symfony": ">=4",
-                "symfony/templating": ">=4",
-                "symfony/translation": ">=4",
-                "symfony/twig-bridge": ">=4",
-                "symfony/twig-bundle": ">=4",
-                "symfony/validator": ">=4",
-                "symfony/var-dumper": ">=4",
-                "symfony/web-link": ">=4",
-                "symfony/web-profiler-bundle": ">=4",
-                "symfony/web-server-bundle": ">=4",
-                "symfony/workflow": ">=4",
-                "symfony/yaml": ">=4"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Enforces Long Term Supported versions of Symfony components",
-            "homepage": "https://symfony.com",
-            "time": "2017-10-19T02:02:36+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
