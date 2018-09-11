@@ -33,7 +33,7 @@
         }
     },
     "replace": {
-        "paragonie/random_compat": "*",
+        "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
         "symfony/polyfill-php71": "*",
