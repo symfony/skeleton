@@ -8,12 +8,10 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/console": "*",
+        "symfony/dotenv": "*",
         "symfony/flex": "^1.1",
         "symfony/framework-bundle": "*",
         "symfony/yaml": "*"
-    },
-    "require-dev": {
-        "symfony/dotenv": "*"
     },
     "config": {
         "preferred-install": {
