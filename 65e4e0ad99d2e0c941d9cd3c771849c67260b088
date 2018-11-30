@@ -1,0 +1,61 @@
+---------------------------------------------------------------------------
+
+by Tobion at 2018-11-15T12:20:45Z
+
+👎 https://github.com/symfony/recipes/pull/491#discussion_r233655794
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-11-22T14:11:12Z
+
+Merging this would fix https://github.com/symfony/recipes/issues/497
+I think we should merge.
+
+---------------------------------------------------------------------------
+
+by chalasr at 2018-11-22T14:27:53Z
+
+Not fond of promoting dotenv for production personally, I'd prefer to not do this change if we can.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-11-22T14:30:17Z
+
+It's just adding the classes in `vendor/` so they could be used.
+Promoting or not belongs to the doc, not to these technical things.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2018-11-22T14:36:35Z
+
+From a user perspective (DX I would say), I'm ok with adding dotenv in require.
+
+---------------------------------------------------------------------------
+
+by Tobion at 2018-11-26T19:18:00Z
+
+You will not get an error if you forgot to define env vars. How can this be good DX? This is a security risk and bug festival.
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-11-26T19:57:36Z
+
+Yes you will, but at the container level. The .env files should provide default values, that's all. If you forgot to set one of them, the app will react accordingly. Having dotenv in dev for the reason you mention is a very loose band-aid I wouldn't recommend anyone to rely on.
+
+---------------------------------------------------------------------------
+
+by Tobion at 2018-11-26T20:01:53Z
+
+So why would env vars me missing if it reads the .env file which sets the default values? What's your solution that is more reliable and works 100% of the cases?
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2018-11-26T21:55:07Z
+
+To verify that all env vars are defined, you could have a script that loads .env files and then ensures the SYMFONY_DOTENV_VARS is empty. This script would make your deployment fail if not.
+
+---------------------------------------------------------------------------
+
+by keradus at 2018-11-26T22:09:07Z
+
+To be honest, that extra script sounds like a workaround
