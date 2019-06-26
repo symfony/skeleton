@@ -5,15 +5,15 @@
     "description": "A minimal Symfony project recommended to create bare bones applications",
     "require": {
         "php": "^7.0.8",
+        "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/console": "^3.3",
-        "symfony/flex": "^1.0",
-        "symfony/framework-bundle": "^3.3",
-        "symfony/lts": "^3",
-        "symfony/yaml": "^3.3"
+        "symfony/flex": "^1.3.1"
     },
-    "require-dev": {
-        "symfony/dotenv": "^3.3"
+    "flex-require": {
+        "symfony/console": "*",
+        "symfony/dotenv": "*",
+        "symfony/framework-bundle": "*",
+        "symfony/yaml": "*"
     },
     "config": {
         "preferred-install": {
@@ -32,6 +32,8 @@
         }
     },
     "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
         "symfony/polyfill-php70": "*",
         "symfony/polyfill-php56": "*"
@@ -47,13 +49,12 @@
         ]
     },
     "conflict": {
-        "symfony/symfony": "*",
-        "symfony/twig-bundle": "<3.3",
-        "symfony/debug": "<3.3"
+        "symfony/symfony": "*"
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false
+            "allow-contrib": false,
+            "require": "3.3.*"
         }
     }
 }
