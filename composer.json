@@ -17,7 +17,7 @@
         "symfony/yaml": "*"
     },
     "require-dev": {
-        "symfony/debug": "^4.4|^5.0",
+        "symfony/debug": "*",
     },
     "config": {
         "preferred-install": {
