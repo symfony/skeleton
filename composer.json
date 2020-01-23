@@ -58,6 +58,9 @@
         "symfony/symfony": "*"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "5.1-dev"
+        },
         "symfony": {
             "allow-contrib": false,
             "require": "5.1.*"
