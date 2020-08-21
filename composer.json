@@ -4,7 +4,7 @@
     "license": "MIT",
     "description": "A minimal Symfony project recommended to create bare bones applications",
     "require": {
-        "php": "^7.0.8",
+        "php": ">=7.0.8",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/flex": "^1.3.1"
