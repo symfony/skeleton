@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2021-11-09T18:28:31Z
+
+We won't retag the skeleton for older versions, but I'm fine doing this on 5.4
+In practice this shouldn't matter since composer will always select the latest.
+
+---------------------------------------------------------------------------
+
+by derrabus at 2021-11-09T18:37:58Z
+
+Okay, let's merge to 5.4 then.
+
+> In practice this shouldn't matter since composer will always select the latest.
+
+That is correct. However, this constraint will be persisted in the composer.json file of every new Symfony application that will be created from the skeleton. If we discourage the use of older versions, I believe that letting new applications start with that constraint a good way to document that.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2021-11-10T08:01:29Z
+
+I'm fine with this change. At the very least, it sends a "subtle" message in the right direction :)
