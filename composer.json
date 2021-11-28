@@ -9,7 +9,7 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/flex": "^1.17"
+        "symfony/flex": "^1.17|^2"
     },
     "flex-require": {
         "symfony/console": "*",
