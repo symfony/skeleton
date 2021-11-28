@@ -9,7 +9,7 @@
         "php": ">=8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/flex": "^1.17"
+        "symfony/flex": "^2"
     },
     "flex-require": {
         "symfony/console": "*",
@@ -39,8 +39,7 @@
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
-        "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php72": "*"
+        "symfony/polyfill-iconv": "*"
     },
     "scripts": {
         "auto-scripts": [
