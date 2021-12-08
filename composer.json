@@ -18,6 +18,9 @@
     "require-dev": {
     },
     "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        },
         "preferred-install": {
             "*": "dist"
         },
