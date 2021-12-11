@@ -1,0 +1,32 @@
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2021-12-08T12:59:21Z
+
+We should also list symfony/runtime
+This should target 4.4 don't you think?
+As an additional step, we might want flex to generate these entries in existing projects.
+Up for a PR doing so?
+
+---------------------------------------------------------------------------
+
+by stof at 2021-12-08T13:42:06Z
+
+I'll change the target branch to be 4.4
+And yeah, `symfony/runtime` should indeed also be whitelisted in 5.3+
+
+> As an additional step, we might want flex to generate these entries in existing projects.
+
+not needed. Composer will ask interactively about that when running Composer 2.2+ in an existing project AFAICT.
+
+---------------------------------------------------------------------------
+
+by stof at 2021-12-08T13:46:22Z
+
+I'll send another PR for `symfony/runtime` once this PR is merged and merged up inside the 5.3 branch (or 5.4 if we don't update 5.3 anymore).
+
+---------------------------------------------------------------------------
+
+by nicolas-grekas at 2021-12-11T09:32:16Z
+
+Thanks @stof
+I'm going to add symfony/runtime while merging up, no worries.
