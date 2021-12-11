@@ -20,6 +20,9 @@
     "require-dev": {
     },
     "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        },
         "optimize-autoloader": true,
         "preferred-install": {
             "*": "dist"
@@ -57,6 +60,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
+            "docker": false,
             "require": "5.2.*"
         }
     }
