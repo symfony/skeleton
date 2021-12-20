@@ -19,6 +19,7 @@
     },
     "config": {
         "allow-plugins": {
+            "composer/package-versions-deprecated": true,
             "symfony/flex": true
         },
         "preferred-install": {
