@@ -9,16 +9,20 @@
         "php": ">=8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/flex": "^2"
-    },
-    "flex-require": {
-        "symfony/console": "*",
-        "symfony/dotenv": "*",
-        "symfony/framework-bundle": "*",
-        "symfony/runtime": "*",
-        "symfony/yaml": "*"
+        "doctrine/doctrine-bundle": "^3.2",
+        "doctrine/doctrine-migrations-bundle": "^4.0",
+        "doctrine/orm": "^3.6",
+        "symfony/console": "8.1.*",
+        "symfony/dotenv": "8.1.*",
+        "symfony/flex": "^2",
+        "symfony/framework-bundle": "8.1.*",
+        "symfony/runtime": "8.1.*",
+        "symfony/twig-bundle": "8.1.*",
+        "symfony/yaml": "8.1.*",
+        "martin-georgiev/postgresql-for-doctrine": "v4.7.*"
     },
     "require-dev": {
+        "symfony/maker-bundle": "v1.67.*"
     },
     "config": {
         "allow-plugins": {
@@ -52,8 +56,13 @@
         "symfony/polyfill-php84": "*"
     },
     "scripts": {
-        "auto-scripts": [
-        ],
+        "env-create": {
+            "create:production:env": "composer dump-env prod"
+        },
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
         "post-install-cmd": [
             "@auto-scripts"
         ],
